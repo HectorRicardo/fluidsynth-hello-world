@@ -25,9 +25,8 @@ public class GervillHelloWorld {
 
     channel.programChange(0, 0);
 
-    // In contrast, these lines are working as expected
-    //channel.controlChange(65, 127);
-    //channel.controlChange(5, 127);
+    channel.controlChange(65, 127);
+    channel.controlChange(5, 64);
 
     channel.noteOn(60, 64);
     channel.noteOn(64, 64);

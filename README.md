@@ -1,9 +1,9 @@
 Command to make compile:
 
-javac -h . Synthesizer.java
+javac -h . FluidSynthHelloWorld.java
 
-gcc -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o synthesizer.dll Synthesizer.c -lfluidsynth
+gcc -I"%JAVA_HOME%\include" -I"%JAVA_HOME%\include\win32" -shared -o FluidSynthHelloWorld.dll FluidSynthHelloWorld.c -lfluidsynth
 
 To run:
 
-java Synthesizer
+java FluidSynthHelloWorld
