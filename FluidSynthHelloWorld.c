@@ -23,6 +23,9 @@ JNIEXPORT jboolean JNICALL Java_FluidSynthHelloWorld_open(JNIEnv* env, jobject t
   const char* soundfontPointer = (*env)->GetStringUTFChars(env, soundfont, NULL);
   int sfont_id = fluid_synth_sfload(synth, soundfontPointer, 1);
   if (sfont_id == FLUID_FAILED) {
+    delete_fluid_audio_driver(adriver);
+    delete_fluid_synth(synth);
+    delete_fluid_settings(settings);
     return 0;
   }
   sfont = fluid_synth_get_sfont_by_id(synth, sfont_id);
